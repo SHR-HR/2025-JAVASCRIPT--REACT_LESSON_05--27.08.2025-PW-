@@ -1,0 +1,209 @@
+// Стили для компонента Filter (Фильтр)
+
+// Основной контейнер фильтра
+.filter {
+  background: #fff;                      // Белый фон
+  border-radius: 12px;                   // Скругление углов 12px
+  padding: 24px;                         // Внутренние отступы 24px
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); // Тень с прозрачностью
+  margin-bottom: 24px;                   // Отступ снизу 24px
+}
+
+// Группа элементов фильтра
+.filterGroup {
+  margin-bottom: 20px;                   // Отступ снизу 20px
+}
+
+// Стили для текстовой метки (label)
+.label {
+  display: block;                        // Блочное отображение
+  margin-bottom: 8px;                    // Отступ снизу 8px
+  font-weight: 600;                      // Жирность шрифта 600
+  color: #374151;                        // Цвет текста (темно-серый)
+  font-size: 0.875rem;                   // Размер шрифта 14px (0.875rem)
+}
+
+// Группа input поля с кнопкой
+.inputGroup {
+  position: relative;                    // Относительное позиционирование
+  display: flex;                         // Flex-контейнер
+  align-items: center;                   // Выравнивание по центру по вертикали
+}
+
+// Стили для input поля
+.input {
+  width: 100%;                           // Ширина 100%
+  max-width: 300px;                      // Максимальная ширина 300px
+  padding: 12px 16px;                    // Внутренние отступы 12px сверху/снизу, 16px слева/справа
+  border: 2px solid #e5e7eb;             // Граница 2px solid (светло-серый)
+  border-radius: 8px;                    // Скругление углов 8px
+  font-size: 1rem;                       // Размер шрифта 16px (1rem)
+  transition: all 0.2s ease;             // Плавный переход всех свойств за 0.2s
+  background: #fff;                      // Белый фон
+
+  // Стили для состояния фокуса
+  &:focus {
+    outline: none;                       // Убираем стандартный outline
+    border-color: #3b82f6;               // Цвет границы при фокусе (синий)
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1); // Тень при фокусе
+  }
+
+  // Стили для placeholder текста
+  &::placeholder {
+    color: #9ca3af;                      // Цвет placeholder (серый)
+  }
+}
+
+// Стили для кнопки очистки
+.clearButton {
+  position: absolute;                    // Абсолютное позиционирование
+  right: 12px;                           // Отступ справа 12px
+  background: none;                      // Прозрачный фон
+  border: none;                          // Без границы
+  font-size: 20px;                       // Размер шрифта 20px
+  color: #9ca3af;                        // Цвет текста (серый)
+  cursor: pointer;                       // Курсор pointer при наведении
+  padding: 0;                            // Без внутренних отступов
+  width: 20px;                           // Ширина 20px
+  height: 20px;                          // Высота 20px
+  display: flex;                         // Flex-контейнер
+  align-items: center;                   // Выравнивание по центру по вертикали
+  justify-content: center;               // Выравнивание по центру по горизонтали
+  border-radius: 50%;                    // Круглая форма
+  transition: all 0.2s ease;             // Плавный переход всех свойств за 0.2s
+
+  // Стили при наведении на кнопку
+  &:hover {
+    background: #f3f4f6;                 // Фон при наведении (светло-серый)
+    color: #6b7280;                      // Цвет текста при наведении (серый)
+  }
+}
+
+// Стили для секции быстрых фильтров
+.quickFilters {
+  border-top: 1px solid #e5e7eb;         // Верхняя граница 1px solid (светло-серый)
+  padding-top: 16px;                     // Внутренний отступ сверху 16px
+}
+
+// Стили для метки быстрых фильтров
+.quickLabel {
+  display: block;                        // Блочное отображение
+  margin-bottom: 12px;                   // Отступ снизу 12px
+  font-weight: 500;                      // Жирность шрифта 500
+  color: #6b7280;                        // Цвет текста (серый)
+  font-size: 0.875rem;                   // Размер шрифта 14px (0.875rem)
+}
+
+// Контейнер для кнопок быстрого выбора
+.quickButtons {
+  display: flex;                         // Flex-контейнер
+  gap: 8px;                              // Расстояние между элементами 8px
+  flex-wrap: wrap;                       // Перенос на новую строку при необходимости
+}
+
+// Стили для кнопок быстрого выбора
+.quickButton {
+  padding: 6px 12px;                     // Внутренние отступы 6px сверху/снизу, 12px слева/справа
+  border: 1px solid #d1d5db;             // Граница 1px solid (серый)
+  background: #fff;                      // Белый фон
+  color: #374151;                        // Цвет текста (темно-серый)
+  border-radius: 6px;                    // Скругление углов 6px
+  cursor: pointer;                       // Курсор pointer при наведении
+  font-weight: 500;                      // Жирность шрифта 500
+  transition: all 0.2s ease;             // Плавный переход всех свойств за 0.2s
+  font-size: 0.875rem;                   // Размер шрифта 14px (0.875rem)
+  min-width: 36px;                       // Минимальная ширина 36px
+
+  // Стили при наведении на кнопку
+  &:hover {
+    background: #f9fafb;                 // Фон при наведении (очень светло-серый)
+    border-color: #9ca3af;               // Цвет границы при наведении (серый)
+    transform: translateY(-1px);         // Легкое поднятие кнопки на 1px
+  }
+
+  // Стили для активной кнопки
+  &.active {
+    background: #3b82f6;                 // Фон активной кнопки (синий)
+    color: #fff;                         // Цвет текста активной кнопки (белый)
+    border-color: #3b82f6;               // Цвет границы активной кнопки (синий)
+
+    // Стили при наведении на активную кнопку
+    &:hover {
+      background: #2563eb;               // Фон при наведении (темно-синий)
+      border-color: #2563eb;             // Цвет границы при наведении (темно-синий)
+    }
+  }
+}
+
+// Стили для блока активного фильтра
+.activeFilter {
+  display: flex;                         // Flex-контейнер
+  align-items: center;                   // Выравнивание по центру по вертикали
+  justify-content: space-between;        // Распределение пространства между элементами
+  background: #eff6ff;                   // Фон (светло-синий)
+  border: 1px solid #bfdbfe;             // Граница 1px solid (голубой)
+  border-radius: 8px;                    // Скругление углов 8px
+  padding: 12px 16px;                    // Внутренние отступы 12px сверху/снизу, 16px слева/справа
+  margin-top: 16px;                      // Отступ сверху 16px
+  gap: 12px;                             // Расстояние между элементами 12px
+
+  // Адаптивные стили для мобильных устройств (максимальная ширина 480px)
+  @media (max-width: 480px) {
+    flex-direction: column;              // Вертикальное направление flex
+    align-items: flex-start;             // Выравнивание по началу
+    gap: 8px;                            // Расстояние между элементами 8px
+  }
+}
+
+// Стили для текста активного фильтра
+.activeText {
+  color: #1e40af;                        // Цвет текста (темно-синий)
+  font-weight: 500;                      // Жирность шрифта 500
+  font-size: 0.875rem;                   // Размер шрифта 14px (0.875rem)
+}
+
+// Стили для кнопки сброса фильтра
+.removeFilter {
+  background: #3b82f6;                   // Фон (синий)
+  color: #fff;                           // Цвет текста (белый)
+  border: none;                          // Без границы
+  border-radius: 6px;                    // Скругление углов 6px
+  padding: 6px 12px;                     // Внутренние отступы 6px сверху/снизу, 12px слева/справа
+  cursor: pointer;                       // Курсор pointer при наведении
+  font-weight: 500;                      // Жирность шрифта 500
+  font-size: 0.8rem;                     // Размер шрифта 12.8px (0.8rem)
+  transition: all 0.2s ease;             // Плавный переход всех свойств за 0.2s
+  white-space: nowrap;                   // Запрет переноса текста
+
+  // Стили при наведении на кнопку
+  &:hover {
+    background: #2563eb;                 // Фон при наведении (темно-синий)
+    transform: translateY(-1px);         // Легкое поднятие кнопки на 1px
+  }
+}
+
+// Медиа-запрос для адаптивности на планшетах (максимальная ширина 768px)
+@media (max-width: 768px) {
+  .filter {
+    padding: 20px;                       // Уменьшаем внутренние отступы до 20px
+    margin-bottom: 20px;                 // Уменьшаем отступ снизу до 20px
+  }
+
+  .input {
+    max-width: 100%;                     // Убираем ограничение максимальной ширины
+  }
+
+  .quickButtons {
+    gap: 6px;                            // Уменьшаем расстояние между кнопками до 6px
+  }
+
+  .quickButton {
+    padding: 5px 10px;                   // Уменьшаем внутренние отступы кнопок
+    min-width: 32px;                     // Уменьшаем минимальную ширину кнопок
+  }
+}
+
+
+
+
+

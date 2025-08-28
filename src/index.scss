@@ -1,0 +1,54 @@
+/* Глобальный сброс стилей для всех элементов */
+* {
+  margin: 0; /* Убираем внешние отступы у всех элементов */
+  padding: 0; /* Убираем внутренние отступы у всех элементов */
+  box-sizing: border-box; /* Меняем модель расчета размеров на border-box (padding и border включаются в ширину/высоту) */
+}
+
+/* Стили для тела документа (body) */
+body {
+  /* Inter + системные шрифты; сами шрифты подключаются через <link> в index.html */
+  /* Указан порядок приоритета шрифтов: сначала Inter, если не загрузится - системные шрифты */
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+
+  -webkit-font-smoothing: antialiased; /* Сглаживание шрифтов для WebKit браузеров (Chrome, Safari) */
+  -moz-osx-font-smoothing: grayscale; /* Сглаживание шрифтов для Firefox */
+  line-height: 1.5; /* Высота строки (интерлиньяж) */
+}
+
+/* Стили для корневого элемента React приложения */
+#root {
+  min-height: 100vh; /* Минимальная высота равна 100% высоты viewport (окна браузера) */
+}
+
+/* Стили для элементов с кодом (code, pre) */
+code {
+  /* Моноширинные шрифты для отображения кода */
+  font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
+}
+
+/* Стили для скроллбара в WebKit браузерах (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 8px; /* Ширина скроллбара */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Цвет фона дорожки скроллбара */
+  border-radius: 4px; /* Скругление углов дорожки */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1; /* Цвет бегунка скроллбара */
+  border-radius: 4px; /* Скругление углов бегунка */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8; /* Цвет бегунка при наведении курсора */
+}
+
+
+
+
+
+
